@@ -1,4 +1,4 @@
-name: Create PR on hoge-platform-infra
+name: Create PR on subtree
 
 on:
   push:
@@ -9,17 +9,17 @@ jobs:
   createPR:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout hoge-platform-shared-infra
+      - name: Checkout subtree
         uses: actions/checkout@v2
         with:
           repository: 'yk-mt12/subtree-practice-sub'
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create PR on hoge-platform-infra
+      - name: Create PR on main
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: 'main'
-          destination_branch: 'main'
+          source_branch: 'master'
+          destination_branch: 'master'
           pr_title: 'Update from subtree'
           pr_body: 'This PR was auto-generated to sync up with subtree'
           destination_repo: 'yk-mt12/subtree-practice-main'

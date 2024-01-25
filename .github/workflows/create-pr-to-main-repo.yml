@@ -12,7 +12,7 @@ jobs:
       - name: Checkout hoge-platform-shared-infra
         uses: actions/checkout@v2
         with:
-          repository: yk-mt12/subtree-practice-sub/
+          repository: 'yk-mt12/subtree-practice-sub'
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create PR on hoge-platform-infra

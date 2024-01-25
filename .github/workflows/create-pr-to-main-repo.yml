@@ -3,7 +3,7 @@ name: Create PR on hoge-platform-infra
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   createPR:
